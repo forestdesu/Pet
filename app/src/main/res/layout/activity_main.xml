@@ -71,10 +71,10 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tag id:" />
+                android:text="Category id:" />
 
             <EditText
-                android:id="@+id/tag_id"
+                android:id="@+id/category_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -99,10 +99,10 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Tag name:" />
+                android:text="Category name:" />
 
             <EditText
-                android:id="@+id/tag_name"
+                android:id="@+id/category_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -127,17 +127,17 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Category name:" />
+                android:text="Name:" />
 
             <EditText
-                android:id="@+id/category_name"
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:gravity="right"
                 android:inputType="textPersonName"
-                android:text="string" />
+                android:text="doggie" />
         </LinearLayout>
 
         <LinearLayout
@@ -183,10 +183,10 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Category id:" />
+                android:text="Tags id:" />
 
             <EditText
-                android:id="@+id/category_id"
+                android:id="@+id/tags_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -210,17 +210,17 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Status:" />
+                android:text="Tags name:" />
 
             <EditText
-                android:id="@+id/status"
+                android:id="@+id/tags_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:gravity="right"
                 android:inputType="textPersonName"
-                android:text="available" />
+                android:text="string" />
         </LinearLayout>
 
         <LinearLayout
@@ -238,17 +238,17 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Name:" />
+                android:text="Status:" />
 
             <EditText
-                android:id="@+id/Name"
+                android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:gravity="right"
                 android:inputType="textPersonName"
-                android:text="doggie" />
+                android:text="available" />
         </LinearLayout>
 
         <LinearLayout
@@ -277,20 +277,23 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/postDataBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
+        android:onClick="onClick"
         android:text="  Создать"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/error_message"
+    <ProgressBar
+        android:id="@+id/loadingPB"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/postDataBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10" />

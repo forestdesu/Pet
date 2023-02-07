@@ -11,10 +11,6 @@ import retrofit2.http.POST;
 
 public interface PetAPI {
     @POST("pet")
-    PetResonse postData(@Body Pet pet);
 
-    Retrofit retrofit = new Retrofit.Builder()
-            .baseUrl("https://petstore.swagger.io/v2/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build();
+    Call<Pet> createPost(@Body Pet dataModal);
 }
